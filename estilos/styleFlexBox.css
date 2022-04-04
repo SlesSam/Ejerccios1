@@ -1,0 +1,105 @@
+/*Header*/
+div.left{
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+
+div p{
+    width: 150px;
+    background-color: red;
+    height: 75px;
+    margin: 10px;
+}
+/*Es la caja central que no se pueden mover aunque se haga mas pequeña*/
+div.centra{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+/*es para que las cajas se hagan mas pequeñas */
+@media (min-width:600px) and (max-width: 1000px) {
+    div.left{
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 150px
+        100px
+        1fr
+        100px;
+        grid-template-areas:
+        "my-header my-header my-header"
+    }
+    
+}
+
+/*Contenedor*/
+
+div#cajaAbajo{
+    display: flex;
+    flex-wrap: nowrap; 
+}
+
+ p.azul{
+   
+    width: 150px;
+    background-color: blue;
+    height: 75px;
+    margin: 10px;
+
+
+}
+
+div.azulAbajo p{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: blue;
+
+  
+}
+
+
+
+/* Footer*/
+div.izq {
+    display: flex;
+    flex-wrap: nowrap; 
+    
+
+}
+
+div.izq p{
+    height: 75px;
+    width: 13%;
+}
+
+
+/*esto es para que el Firts left tenga su porcentaje*/
+div.izqPor{
+    
+    
+    width: 30%;
+    text-align: center;
+    background-color: red;
+    height: 75px;
+    margin: 10px;
+
+}
+
+div.right{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+div.right p{
+    background-color: red;
+    height: 70px;
+    margin: 9px;
+    
+}
+
+
+
+
+
+
